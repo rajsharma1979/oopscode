@@ -1,0 +1,6094 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>http://api.tradologie.com/Buyer</title>
+<style type="text/css">
+                    body {
+                        font-family: sans-serif;
+                        font-size: 0.85em;
+                        margin: 2em 8em;
+                    }
+
+                    .methods {
+                        background-color: #ffffff;
+                        padding: 1em;
+                    }
+
+                    pre {
+                        border: dashed 1px;
+                        border-color: #999999;
+                        margin-left: 7px;
+                        padding: 0.5em;
+                        line-height: 150%;
+                        font-family: monospace;
+                        font-size: 12px;
+                        color: #000;
+                    }
+
+                    a:link {
+                        color: #333333;
+                        font-family: Verdana, Arial, Helvetica, sans-serif;
+                        font-size: 12px;
+                    }
+
+                    a:visited {
+                        color: #333333;
+                        color: #333333;
+                        font-family: Verdana, Arial, Helvetica, sans-serif;
+                    }
+
+                    h1 {
+                        margin: 0px 5px 5px;
+                        font: verdana, arial, helvetica;
+                        color: #00cc33;
+                        font-weight: normal;
+                        font-size: 18.0pt;
+                        font-weight: bold;
+                    }
+
+                    h2 {
+                        margin: 0px 0px 5px;
+                        font: verdana, arial, helvetica;
+                        color: #00cc33;
+                        font-weight: normal;
+                        font-size: 14.0pt;
+                        font-weight: bold;
+                    }
+
+                    h3 {
+                        margin: 10px 0px 5px;
+                        font-weight: bold;
+                        font-family: Verdana, Arial, Helvetica, sans-serif;
+                        font-size: 14px;
+                        color: #00cc33;
+                    }
+
+                    h4 {
+                        margin: 0em;
+                        padding: 0em;
+                    }
+
+                    h6 {
+                        font-size: 1.1em;
+                        color: #99a;
+                        margin: 0.5em 0em 0.25em 0em;
+                    }
+
+                    dd {
+                        margin-left: 1em;
+                    }
+
+                    tt {
+                        font-size: 1.2em;
+                    }
+
+                    table {
+                        margin-bottom: 0.5em;
+                    }
+
+                    th {
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 12px;
+                        font-weight: bold;
+                        text-align: left;
+                        padding: 5px;
+                        background: #00cc33;
+                        -moz-border-radius:;
+                        width = 150px;
+                    }
+
+                    td {
+                        padding: 3px 6px;
+                        font-weight: normal;
+                        vertical-align: top;
+                        background: #eeeeee;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 12px;
+                    }
+
+                    td p {
+                        margin: 0px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 12px;
+                    }
+
+                    ul {
+                        padding-left: 1.75em;
+                    }
+
+                    li {
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 12px;
+                    }
+
+                    p + ul, p + ol, p + dl {
+                        margin-top: 0em;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 12px;
+                    }
+
+                    .optional {
+                        font-weight: normal;
+                        opacity: 0.75;
+                    }
+                </style>
+</head>
+<body>
+<h1>http://api.tradologie.com/Buyer</h1>
+<p>Tradologie-Buyer</p>
+<ul>
+<li>
+<a href="#resources">Resources</a>
+<ul>
+<li>
+<a href="#http://api.tradologie.com/Buyer#Buyer">http://api.tradologie.com/Buyer/login</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#RegisterV1">http://api.tradologie.com/Buyer/RegisterV1</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#RegisterWithOtherServices">http://api.tradologie.com/Buyer/RegisterWithOtherServices</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#DashboardNotification">http://api.tradologie.com/Buyer/DashboardNotification</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#category">http://api.tradologie.com/Buyer/category</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#SupplierList">http://api.tradologie.com/Buyer/SupplierList/categoryID/CustomerID</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#AddSupplierShortlist">http://api.tradologie.com/Buyer/AddSupplierShortlist</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#RemoveSupplierShortlist">http://api.tradologie.com/Buyer/RemoveSupplierShortlist</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#createauction">http://api.tradologie.com/Buyer/createauction</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#AddUpdateAuction">http://api.tradologie.com/Buyer/AddUpdateAuction</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#AuctionDetailForEdit">http://api.tradologie.com/Buyer/AuctionDetailForEdit</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#AuctionDetailForEdit">http://api.tradologie.com/Buyer/AuctionDetailForEdit</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#AuctionItemList">http://api.tradologie.com/Buyer/AuctionItemList</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#AutionSupplierList">http://api.tradologie.com/Buyer/AutionSupplierList</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#DeleteAuctionItem">http://api.tradologie.com/Buyer/DeleteAuctionItem</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#AddAuctionSupplier">http://api.tradologie.com/Buyer/AddAuctionSupplier</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#AddAuctionSupplierList">http://api.tradologie.com/Buyer/AddAuctionSupplierList/GroupID</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#SupplierShortlisted">http://api.tradologie.com/Buyer/SupplierShortlisted/GroupID/CustomerID</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#AuctionItemddl">http://api.tradologie.com/Buyer/AuctionItemddl</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#AddAuctionItem">http://api.tradologie.com/Buyer/AddAuctionItem</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#PackingImageUpload">http://api.tradologie.com/Buyer/PackingImageUpload</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#AuctionList">http://api.tradologie.com/Buyer/AuctionList</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#AuctionOrderHistory">http://api.tradologie.com/Buyer/AuctionOrderHistory</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#AuctionOrderDocument">http://api.tradologie.com/Buyer/AuctionOrderDocument</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#APIAuctionLive">http://api.tradologie.com/Buyer/APIAuctionLive/Token/AuctionCode</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#SendVerificationEmail">http://api.tradologie.com/Buyer/SendVerificationEmail</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#EscrowPaymentDetail">http://api.tradologie.com/Buyer/EscrowPaymentDetail</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#EscrowPaymentOffline">http://api.tradologie.com/Buyer/EscrowPaymentOffline</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#AuctionInvoiceList">http://api.tradologie.com/Buyer/AuctionInvoiceList</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#AuctionInvoiceDetail">http://api.tradologie.com/Buyer/AuctionInvoiceDetail</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#InsertAuctionInvoiceDoc">http://api.tradologie.com/Buyer/InsertAuctionInvoiceDoc</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#InvoiceDocList">http://api.tradologie.com/Buyer/InvoiceDocList</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#AuctionInvoiceDocDeletet">http://api.tradologie.com/Buyer/AuctionInvoiceDocDeletet</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#UpdateReceivedQty">http://api.tradologie.com/Buyer/UpdateReceivedQty</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#FinalSubmitStatus">http://api.tradologie.com/Buyer/FinalSubmitStatus</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#InsertPaymentDocument">http://api.tradologie.com/Buyer/InsertPaymentDocument</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#MyAccount">http://api.tradologie.com/Buyer/MyAccount</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#AuctionChargesDetail">http://api.tradologie.com/Buyer/AuctionChargesDetail</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#AuctionOffLinePayment">http://api.tradologie.com/Buyer/AuctionOffLinePayment</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#AuctionChargeOnlineRequest">http://api.tradologie.com/Buyer/AuctionChargeOnlineRequest</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#AddAuctionChargeOnlineRequestData">http://api.tradologie.com/Buyer/AddAuctionChargeOnlineRequestData</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#AddAuctionChargeOnlineResponseData">http://api.tradologie.com/Buyer/AddAuctionChargeOnlineResponseData</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#PODocumentUpload">http://api.tradologie.com/Buyer/PODocumentUpload</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#CategoryForRegistration">http://api.tradologie.com/Buyer/CategoryForRegistration</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#LCDocumentUpload">http://api.tradologie.com/Buyer/LCDocumentUpload</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#Commonddl">http://api.tradologie.com/Buyer/Commonddl</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#StateList">http://api.tradologie.com/Buyer/StateList</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#CityList">http://api.tradologie.com/Buyer/CityList</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#UpdateCompulsoryDetails">http://api.tradologie.com/Buyer/UpdateCompulsoryDetails</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#AuctionOrderProcessDetail">http://api.tradologie.com/Buyer/AuctionOrderProcessDetail</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#AuctionOrderProcessItemList">http://api.tradologie.com/Buyer/AuctionOrderProcessItemList</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#UpdateDocsAccept">http://api.tradologie.com/Buyer/UpdateDocsAccept</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#UpdateCounterOfferQty">http://api.tradologie.com/Buyer/UpdateCounterOfferQty</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#UpdateCounterOfferStatus">http://api.tradologie.com/Buyer/UpdateCounterOfferStatus</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#UpdateAuctionQty">http://api.tradologie.com/Buyer/UpdateAuctionQty</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#UpdateAuctionStatus">http://api.tradologie.com/Buyer/UpdateAuctionStatus</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#UpdateAuctionPOReferenceNo">http://api.tradologie.com/Buyer/UpdateAuctionPOReferenceNo</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#RegistrationStatusDetail">http://api.tradologie.com/Buyer/RegistrationStatusDetail</a>
+</li>
+<li>
+<a href="#http://api.tradologie.com/Buyer#SupplierList_ByBuyer">http://api.tradologie.com/Buyer/SupplierList_ByBuyer/5/2</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#representations">Representations</a>
+<ul>
+<li>
+<a href="#N20098">application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2009B">application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2009E">multipart/form-data<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N200A5">Status Code200-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N200AC">Status Code-application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N200AF">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N200B2">Status Code-multipart/form-data<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N200B9">Status Code415 500-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20141">application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20148">Status Code-application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2014F">Status Code200-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20272">Status Code200-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20543">Status Code200-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20BC2">Status Code200-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20C0E">application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20C11">application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20C18">Status Code405 500-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20C1F">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20C22">Status Code-application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20C29">Status Code200-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20C51">application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20C58">Status Code-application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20C5F">Status Code200-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20C87">application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20C8E">Status Code200-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20C95">Status Code-application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20F32">Status Code200-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="resources">Resources</h2>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#Buyer">Buyer</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Login">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>UserID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>user Email ID</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Password</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>User login Password</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Manufacturer</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Device Manufacturer</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Model</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Device Model name</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>OsVersionRelease</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Device version</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>AppVersion</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>app version</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>FcmToken</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>FCM Token</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>OsType</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Pass "Android" or "IOS"</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>DeviceId</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt>mfmdfmk11161</tt>
+</p>
+</td>
+<td>
+<p>Simulator Device ID</p>
+</td>
+</tr>
+</table>
+<p>
+<em>acceptable request representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N20098">application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2009B">application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2009E">multipart/form-data<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+<p>
+<em>available response representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N200A5">Status Code200-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N200AC">Status Code-application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N200AF">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N200B2">Status Code-multipart/form-data<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N200B9">Status Code415 500-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#RegisterV1">RegisterV1</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Register">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>static token</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>UserName</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Enter User Name</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>EmailID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>User Email ID</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>MobileNo</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>User Mobile No</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Password</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>User Password</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>GenderID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Pass ID For MALE "2" and FEMALE "1"</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>TypeOfAccountID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Pass Static ID "1"</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>GroupIDs</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Pass Category Gruoup ID, if you select multiple Group thenn pass id with commas seperated</p>
+</td>
+</tr>
+</table>
+<p>
+<em>acceptable request representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N20141">application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+<p>
+<em>available response representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N20148">Status Code-application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2014F">Status Code200-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#RegisterWithOtherServices">RegisterWithOtherServices</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>static Token</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Name</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>User Name</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>EmailID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>User Email ID</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Gender</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Gender ID For Male "2", Female "1"</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>ServiceType</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Facebook or Google Plus of LinkedIn</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>UserAppID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Id of facebook or google plus or Linkedin</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Manufacturer</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Device Manufacturer</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Model</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Device Model</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>OsVersionRelease</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Device OS Version</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>AppVersion</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>device application version</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>FcmToken</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>FCM Token</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>OsType</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Pass "Android" or "IOS"</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>DeviceId</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Device ID</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#DashboardNotification">DashboardNotification</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Pass User Token (You are gotted at the time of Login responce)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>CustomerID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Customer ID  (You are gotted at the time of Login responce)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>UserTimeZone</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>UserTimeZone  (You are gotted at the time of Login responce)</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#category">category</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">GET</h4>
+<p>
+<em>available response representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N20272">Status Code200-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#SupplierList">SupplierList</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">GET</h4>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#AddSupplierShortlist">AddSupplierShortlist</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>User Token</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>UserID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>UserId you Gotted at Login Time</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>CustomerID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>You gotted at Login Time</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>GroupID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Category Group Id eg. Basmati Group ID or Cement GroupID</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>SupplierID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Vendor ID (You Gotted in Supplier List)</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#RemoveSupplierShortlist">RemoveSupplierShortlist</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>User Token Gotted at the time of Login</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>ShortlistID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>ShortlistID ( Gotted In Supplier List)</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#createauction">createauction</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>You gotted at Login Time</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>CustomerID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>You gotted at Login Time</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>GroupID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Category Group Id eg. Basmati Group ID or Cement GroupID</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#AddUpdateAuction">AddUpdateAuction</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>CustomerID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>UserTimeZone</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionGroupID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionCode</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionName</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>DeliveryAddress</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>InspectionAgency</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>PaymentTerm</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>PartialDelivery</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>BankerName</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>Currency</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionStartDate</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>DeliveryLastDate</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>TotalQuantity</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>MinQuantity</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>AgencyName</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>AgencyAddress</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>AgencyPhone</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>AgencyEmail</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>Remarks</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#AuctionDetailForEdit">AuctionDetailForEdit</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">GET</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>CustomerID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#AuctionItemList">AuctionItemList</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#AutionSupplierList">AutionSupplierList</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#DeleteAuctionItem">DeleteAuctionItem</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionTranID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Auction Tran ID (Getting In Auction Item List)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>CustomerID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#AddAuctionSupplier">AddAuctionSupplier</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>CustomerID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>Supplier</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Supplier ID(if you select multiple supplier, all supplier commas seperated in string</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#AddAuctionSupplierList">AddAuctionSupplierList</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">GET</h4>
+<p>
+<em>available response representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N20543">Status Code200-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#SupplierShortlisted">SupplierShortlisted</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">GET</h4>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#AuctionItemddl">AuctionItemddl</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>GroupID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#AddAuctionItem">AddAuctionItem</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Enter User Token</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>CustomerID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Enter Customer ID</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Enter Auction ID</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>GroupID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Enter Group ID</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>CategoryID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Selected GradeID</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>AttributeValue1</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Enter AttributeValue1 ID</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>AttributeValue2</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Enter AttributeValue2 ID</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Unit</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Enter Unit Name</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>PackingTypeID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Enter Packing Type ID</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>PackingSizeID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Enter Packing Size ID</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>CustomCategory</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Enter Manual Custom Grade Text</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Qty</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Enter Quantity</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Note</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Enter Other Specification</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#PackingImageUpload">PackingImageUpload</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Image</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionTranID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Auction TranID (Getting in Responce of AddAuctionItem API</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>ContentType</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Mime Type</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#AuctionList">AuctionList</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>CustomerID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>FilterAuction</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>If You Come form menu pass balank("") or Form Notification Dashboard pass ("NotStart" or "Draft")</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#AuctionOrderHistory">AuctionOrderHistory</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>CustomerID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#AuctionOrderDocument">AuctionOrderDocument</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>PoNo</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Pono Gotted in Order History List</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#APIAuctionLive">APIAuctionLive</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">GET</h4>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#SendVerificationEmail">SendVerificationEmail</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>CustomerID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>CustomerID(Find in Login Response)</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#EscrowPaymentDetail">EscrowPaymentDetail</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>VendorID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#EscrowPaymentOffline">EscrowPaymentOffline</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>User Token (Getting at Login Time)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionSupplierID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Getting in Ecrow Payment Details API</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>CustomerID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Getting at Login Time</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>PaymentType</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>NEFT/RTGS</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>ChequeNo</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Cheque No</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>ChequeDate</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>yyyy/MM/dd</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>BankName</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Enter Bank Name</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>BranchName</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Bank Branch name</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>EscrowAmount</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Enter Amount</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>IFSCode</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>IFSC Code</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Remarks</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Remarks</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#AuctionInvoiceList">AuctionInvoiceList</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>User Token</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>CustomerID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>User Customer ID</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#AuctionInvoiceDetail">AuctionInvoiceDetail</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>CustomerID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionInvoiceID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>AuctionInvoiceID (Getting in Invoice List Api)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>OrderID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>OrderID (Getting in Invoice List Api)</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#InsertAuctionInvoiceDoc">InsertAuctionInvoiceDoc</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>File</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Document URI</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>User Token</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>CustomerID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>User Customer ID</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionInvoiceID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Getting in Invoice List</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>ContentType</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Content Type of Document</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>FileExt</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Document Extension</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>FileName</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Document File Name</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#InvoiceDocList">InvoiceDocList</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>CustomerID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#AuctionInvoiceDocDeletet">AuctionInvoiceDocDeletet</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>User Token</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionInvoiceDocID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>AuctionInvoiceDocID (Getting in InvoiceDocList API)</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#UpdateReceivedQty">UpdateReceivedQty</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>CustomerID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionInvoiceTranID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>AuctionInvoiceTranID( Getting in AuctionInvoiceDetail API)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>BuyerRecievedQuantity</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Enter Quantity</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#FinalSubmitStatus">FinalSubmitStatus</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>CustomerID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionInvoiceID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>ReceivedWeight</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#InsertPaymentDocument">InsertPaymentDocument</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>File</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>CustomerID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>VendorID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>ContentType</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>FileExt</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#MyAccount">MyAccount</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#AuctionChargesDetail">AuctionChargesDetail</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#AuctionOffLinePayment">AuctionOffLinePayment</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>CustomerID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionCharge</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>PaymentType</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>ChequeNo</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>ChequeDate</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>BankName</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>IFSCode</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>Remarks</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#AuctionChargeOnlineRequest">AuctionChargeOnlineRequest</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionCode</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>AuctionCode ( Getting in AuctionDetailForEdit API) or Negotiation List</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>PaymentGateway</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionCharge</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Auction Charge (Getting in AuctionChargesDetail API)</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#AddAuctionChargeOnlineRequestData">AddAuctionChargeOnlineRequestData</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>CustomerID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>TransactionID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>TransactionID (Getting in AuctionChargeOnlineRequest API)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>TokenRequest</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Send all Key value Data in JSON Format</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#AddAuctionChargeOnlineResponseData">AddAuctionChargeOnlineResponseData</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>TransactionID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>TokenResponse</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Gateway response</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Status</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Success / Failure</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#PODocumentUpload">PODocumentUpload</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>File</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>VendorID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>ContentType</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#CategoryForRegistration">CategoryForRegistration</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">GET</h4>
+<p>
+<em>available response representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N20BC2">Status Code200-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#LCDocumentUpload">LCDocumentUpload</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>File</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>ContentType</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#Commonddl">Commonddl</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+</table>
+<p>
+<em>acceptable request representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N20C0E">application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20C11">application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+<p>
+<em>available response representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N20C18">Status Code405 500-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20C1F">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20C22">Status Code-application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20C29">Status Code200-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#StateList">StateList</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>CountryName</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+</table>
+<p>
+<em>acceptable request representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N20C51">application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+<p>
+<em>available response representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N20C58">Status Code-application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20C5F">Status Code200-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#CityList">CityList</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>StateName</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+</table>
+<p>
+<em>acceptable request representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N20C87">application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+<p>
+<em>available response representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N20C8E">Status Code200-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20C95">Status Code-application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#UpdateCompulsoryDetails">UpdateCompulsoryDetails</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>CustomerID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>CompanyName</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>CompanyPANNo</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>CompanyGST</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>StateMarginID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>CityID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>Country</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>UserTimeZone</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>InterestedIn</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#AuctionOrderProcessDetail">AuctionOrderProcessDetail</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>User Token</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionCode</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#AuctionOrderProcessItemList">AuctionOrderProcessItemList</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>User Token</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionCode</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>CustomerID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>PONo</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#UpdateDocsAccept">UpdateDocsAccept</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionDocumentID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Find in  rate List Item</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>UpdateDocType</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Find in Rate List Item</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>UpdateStatus</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>InspectionDocumentAccepted or OtherDocumentAccepted</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#UpdateCounterOfferQty">UpdateCounterOfferQty</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>user Token</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>CustomerID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>User CustoemID</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionRateID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>find in rate Item List</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Qty</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>enter Quantity</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>CounterRate</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>find in rate Item List</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionTranID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>find in rate Item List</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#UpdateCounterOfferStatus">UpdateCounterOfferStatus</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>CustomerID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>VendorID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#UpdateAuctionQty">UpdateAuctionQty</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>CustomerID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionRateID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>Qty</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>CounterRate</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionTranID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#UpdateAuctionStatus">UpdateAuctionStatus</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>CustomerID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>VendorID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#UpdateAuctionPOReferenceNo">UpdateAuctionPOReferenceNo</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>CustomerID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>AuctionID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>VendorID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>ReferenceNo</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#RegistrationStatusDetail">RegistrationStatusDetail</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">POST</h4>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>Token</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<strong>CustomerID</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://api.tradologie.com/Buyer#SupplierList_ByBuyer">SupplierList_ByBuyer</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://api.tradologie.com/Buyer#Method 1">GET</h4>
+<p>
+<em>available response representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N20F32">Status Code200-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<h2 id="representations">Representations</h2>
+<h3 id="N20098">application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N2009B">application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N2009E">multipart/form-data<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N200A5">Status Code200-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N200AC">Status Code-application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N200AF">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N200B2">Status Code-multipart/form-data<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N200B9">Status Code415 500-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20141">application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20148">Status Code-application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N2014F">Status Code200-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20272">Status Code200-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20543">Status Code200-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20BC2">Status Code200-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20C0E">application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20C11">application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20C18">Status Code405 500-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20C1F">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20C22">Status Code-application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20C29">Status Code200-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20C51">application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20C58">Status Code-application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20C5F">Status Code200-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20C87">application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20C8E">Status Code200-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20C95">Status Code-application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20F32">Status Code200-application/json; charset=utf-8<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+</body>
+</html>
